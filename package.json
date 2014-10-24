@@ -11,8 +11,16 @@
     "2d",
     "ray"
   ],
-  "author": "",
+  "author": "Paul Salaets <psalaets@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psalaets/grid-walk.git"
+  },
+  "homepage": "https://github.com/psalaets/grid-walk",
+  "bugs": {
+    "url": "https://github.com/psalaets/grid-walk/issues"
+  },
   "devDependencies": {
     "chai": "^1.9.2",
     "mocha": "^2.0.1"

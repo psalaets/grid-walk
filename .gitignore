@@ -1,0 +1,8 @@
+node_modules
+
+# sublime text stuff
+*.sublime-project
+*.sublime-workspace
+
+# mac stuff
+.DS_Store

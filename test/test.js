@@ -99,16 +99,16 @@ describe('walker#walk', function() {
 // point in space
 function p(x, y) {
   return {
-    x: x || 0,
-    y: y || 0
+    x: x,
+    y: y
   };
 }
 
 // coordinate in grid
 function c(column, row) {
   return {
-    column: column || 0,
-    row: row || 0
+    column: column,
+    row: row
   };
 }
 

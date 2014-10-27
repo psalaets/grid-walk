@@ -94,6 +94,45 @@ describe('walker#walk', function() {
       ]);
     });
   });
+
+  describe('walking diagonal line', function () {
+    describe('crossing above center of cell quad', function () {
+      it('finds 3 upper/right cells of quad', function() {
+        var start = p(15, 3);
+        var end = p(30, 12);
+
+        walker.walk(start, end, collector);
+
+        assert.deepEqual(collector.coords, [
+          c(1, 1),
+          c(2, 1),
+          c(2, 2)
+        ]);
+      });
+    });
+
+    describe('crossing below center of cell quad', function () {
+      it('finds 3 lower/left cells of quad', function () {
+        var start = p(22, 15);
+        var end = p(10, 7);
+
+        walker.walk(start, end, collector);
+
+        assert.deepEqual(collector.coords, [
+          c(2, 2),
+          c(1, 2),
+          c(1, 1)
+        ]);
+      });
+    });
+
+    describe('crossing through center of cell quad', function () {
+      it('finds 3 lower/left cells of quad for SE-facing line');
+      it('finds 3 top/right cells of quad for NW-facing line');
+      it('finds 3 lower/right cells of quad for SW-facing line');
+      it('finds 3 top/left cells of quad for NE-facing line');
+    });
+  });
 });
 
 // point in space

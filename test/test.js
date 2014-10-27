@@ -45,6 +45,6 @@ describe('walker#walk', function() {
 
     walker.walk(start, end, collector);
 
-    assert.deepEqual(collector.coords, [c(1, 1)]);
+    assert.deepEqual(collector.coords, [c(2, 2)]);
   });
 });

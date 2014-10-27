@@ -18,7 +18,7 @@ describe('walker#walk', function() {
 
     walker.walk(start, end, collector);
 
-    assert.deepEqual(collector.coords, [c(1, 1)]);
+    assert.deepEqual(collector.coords, [c(2, 2)]);
   });
 
   describe('walking horizontal line', function() {
@@ -29,8 +29,8 @@ describe('walker#walk', function() {
       walker.walk(start, end, collector);
 
       assert.deepEqual(collector.coords, [
-        c(0, 1),
-        c(1, 1)
+        c(1, 2),
+        c(2, 2)
       ]);
     });
 
@@ -41,8 +41,8 @@ describe('walker#walk', function() {
       walker.walk(start, end, collector);
 
       assert.deepEqual(collector.coords, [
-        c(1, 1),
-        c(0, 1)
+        c(2, 2),
+        c(1, 2)
       ]);
     });
 
@@ -53,7 +53,7 @@ describe('walker#walk', function() {
       walker.walk(start, end, collector);
 
       assert.deepEqual(collector.coords, [
-        c(1, 1)
+        c(2, 2)
       ]);
     });
   });
@@ -66,8 +66,8 @@ describe('walker#walk', function() {
       walker.walk(start, end, collector);
 
       assert.deepEqual(collector.coords, [
-        c(0, 0),
-        c(0, 1)
+        c(1, 1),
+        c(1, 2)
       ]);
     });
 
@@ -78,8 +78,8 @@ describe('walker#walk', function() {
       walker.walk(start, end, collector);
 
       assert.deepEqual(collector.coords, [
-        c(0, 1),
-        c(0, 0)
+        c(1, 2),
+        c(1, 1)
       ]);
     });
 
@@ -90,7 +90,7 @@ describe('walker#walk', function() {
       walker.walk(start, end, collector);
 
       assert.deepEqual(collector.coords, [
-        c(1, 0)
+        c(2, 1)
       ]);
     });
   });
@@ -104,9 +104,9 @@ describe('walker#walk', function() {
         walker.walk(start, end, collector);
 
         assert.deepEqual(collector.coords, [
-          c(0, 0),
-          c(1, 0),
-          c(1, 1)
+          c(1, 1),
+          c(2, 1),
+          c(2, 2)
         ]);
       });
     });
@@ -119,9 +119,9 @@ describe('walker#walk', function() {
         walker.walk(start, end, collector);
 
         assert.deepEqual(collector.coords, [
-          c(1, 1),
-          c(0, 1),
-          c(0, 0)
+          c(2, 2),
+          c(1, 2),
+          c(1, 1)
         ]);
       });
     });

@@ -45,6 +45,17 @@ describe('walker#walk', function() {
     ]);
   });
 
+  it('finds lower cell when horizontal line runs along cell boundary', function() {
+    var start = p(22, 10);
+    var end = p(25, 10);
+
+    walker.walk(start, end, collector);
+
+    assert.deepEqual(collector.coords, [
+      c(2, 2)
+    ]);
+  });
+
   it('finds both cells when down-facing line cross vertically adjacent cells', function() {
     var start = p(1, 1);
     var end = p(1, 12);
@@ -68,6 +79,19 @@ describe('walker#walk', function() {
       c(1, 1)
     ]);
   });
+
+  it('finds right-hand cell when vertical line runs along cell boundary', function() {
+    var start = p(20, 1);
+    var end = p(20, 9);
+
+    walker.walk(start, end, collector);
+
+    assert.deepEqual(collector.coords, [
+      c(2, 1)
+    ]);
+  });
+
+
 });
 
 // point in space

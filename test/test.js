@@ -127,10 +127,57 @@ describe('walker#walk', function() {
     });
 
     describe('crossing through center of cell quad', function () {
-      it('finds 3 lower/left cells of quad for SE-facing line');
-      it('finds 3 upper/right cells of quad for NW-facing line');
-      it('finds 3 lower/right cells of quad for SW-facing line');
-      it('finds 3 upper/left cells of quad for NE-facing line');
+      it('finds 3 lower/left cells of quad for SE-facing line', function() {
+        var start = p(10, 5);
+        var end = p(30, 15);
+
+        walker.walk(start, end, collector);
+
+        assert.deepEqual(collector.coords, [
+          c(0, 0),
+          c(0, 1),
+          c(1, 1)
+        ]);
+      });
+
+      it('finds 3 upper/right cells of quad for NW-facing line', function() {
+        var start = p(30, 15);
+        var end = p(10, 5);
+
+        walker.walk(start, end, collector);
+
+        assert.deepEqual(collector.coords, [
+          c(1, 1),
+          c(1, 0),
+          c(0, 0)
+        ]);
+      });
+
+      it('finds 3 lower/right cells of quad for SW-facing line', function() {
+        var start = p(30, 5);
+        var end = p(10, 15);
+
+        walker.walk(start, end, collector);
+
+        assert.deepEqual(collector.coords, [
+          c(1, 0),
+          c(1, 1),
+          c(0, 1)
+        ]);
+      });
+
+      it('finds 3 upper/left cells of quad for NE-facing line', function() {
+        var start = p(10, 15);
+        var end = p(30, 5);
+
+        walker.walk(start, end, collector);
+
+        assert.deepEqual(collector.coords, [
+          c(0, 1),
+          c(0, 0),
+          c(1, 0)
+        ]);
+      });
     });
   });
 });

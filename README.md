@@ -9,12 +9,18 @@ Code and algorithm came from
 
 ## Usage
 
-    var gw = require('grid-walk')
-    var walker = gw(cellWidth, cellHeight)
-    
-    walker.walk(lineStart, lineEnd, function(coord) {
-      // do something with coord
-    })
+```js
+var gw = require('grid-walk');
+var walker = gw(cellWidth, cellHeight);
+
+var lineStart = {x: 10, y: 50};
+var lineEnd = {x: 0, y: 20};
+
+walker.walk(lineStart, lineEnd, function(coord) {
+  coord.column
+  coord.row
+});
+```
 
 ## Install
 

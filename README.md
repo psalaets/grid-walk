@@ -2,11 +2,6 @@
 
 Walk along line through 2D grid.
 
-Code and algorithm came from
-
-- [http://www.cs.yorku.ca/%7Eamana/research/grid.pdf](http://www.cs.yorku.ca/%7Eamana/research/grid.pdf)
-- [http://www.flipcode.com/archives/Raytracing_Topics_Techniques-Part_4_Spatial_Subdivisions.shtml](http://www.flipcode.com/archives/Raytracing_Topics_Techniques-Part_4_Spatial_Subdivisions.shtml)
-
 ## Usage
 
 ```js
@@ -33,3 +28,10 @@ Row number start at 0 and increase going down.
 ## License
 
 MIT
+
+## Thanks
+
+Code and algorithm came from
+
+- [http://www.cs.yorku.ca/%7Eamana/research/grid.pdf](http://www.cs.yorku.ca/%7Eamana/research/grid.pdf)
+- [http://www.flipcode.com/archives/Raytracing_Topics_Techniques-Part_4_Spatial_Subdivisions.shtml](http://www.flipcode.com/archives/Raytracing_Topics_Techniques-Part_4_Spatial_Subdivisions.shtml)

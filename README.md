@@ -22,6 +22,10 @@ walker.walk(lineStart, lineEnd, function(coord) {
 });
 ```
 
+Column numbers start at 0 and increase going right.
+
+Row number start at 0 and increase going down.
+
 ## Install
 
     npm install grid-walk
